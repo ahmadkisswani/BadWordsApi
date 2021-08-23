@@ -41,7 +41,7 @@ public class getApi {
                     .concat("replace=").concat(confifuration.getReplace()).concat("&")
                     .concat("key=")
                     .concat(confifuration.getKey()).concat("&")
-                    .concat("msg=").concat(confifuration.getMsg()));
+                    .concat("msg=").concat(confifuration.getMsg().replaceAll(" ", "+")));
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setConnectTimeout(5000);
             con.setReadTimeout(5000);
@@ -91,7 +91,7 @@ public class getApi {
                     .concat("replace=").concat(confifuration.getReplace()).concat("&")
                     .concat("key=")
                     .concat(confifuration.getKey()).concat("&")
-                    .concat("msg=").concat(confifuration.getMsg()));
+                    .concat("msg=").concat(confifuration.getMsg().replaceAll(" ", "+")));
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setConnectTimeout(5000);
             con.setReadTimeout(5000);
